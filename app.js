@@ -25,17 +25,18 @@ function mostrarAmigos() {
     }
 }
 
-function sortearAmigos() {
-    const resultados = document.getElementById("resultados");
-    resultados.innerHTML = "";
+function sortearAmigo() {
+    const resultado = document.getElementById("resultados");
+    resultado.innerHTML = "";
 
     if (amigos.length === 0) {
-        resultados.innerHTML = "<li>No hay amigos para sortear.</li>";
+        resultado.innerHTML = "<li>No hay amigos para sortear.</li>";
         return;
     }
 
     const indiceAleatorio = Math.floor(Math.random() * amigos.length);
     const nombreSorteado = amigos[indiceAleatorio];
 
-    resultados.innerHTML = `<li>El amigo sorteado es: <strong>${nombreSorteado}</strong></li>`;
+    resultado.innerHTML = `<li>El amigo sorteado es: <strong>${nombreSorteado}</strong></li>`;
+
 }
